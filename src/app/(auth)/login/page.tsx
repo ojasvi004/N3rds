@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useRouter } from "next/navigation"; // Import useRouter
 import {
   Card,
   CardContent,
@@ -20,9 +21,17 @@ import { Eye, EyeOff } from "lucide-react";
 export default function AuthPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [activeTab, setActiveTab] = useState("login");
-
+  const router = useRouter(); // Initialize router
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push("/businessDash"); // Redirect after login
+  };
+  const handleRegister = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push("/businessDash"); // Redirect after registration
   };
 
   return (
@@ -119,7 +128,7 @@ export default function AuthPage() {
 
               {/* Login Form */}
               <TabsContent value="login" className="mt-0">
-                <form>
+                <form onSubmit={handleLogin}>
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-zinc-300">
@@ -193,7 +202,7 @@ export default function AuthPage() {
 
               {/* Register Form */}
               <TabsContent value="register" className="mt-0">
-                <form>
+                <form onSubmit={handleRegister}>
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
