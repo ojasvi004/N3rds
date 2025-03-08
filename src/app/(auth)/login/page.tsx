@@ -42,7 +42,7 @@ export default function AuthPage() {
           <div className="w-10 h-10 rounded-full text-pink-900 text-5xl flex items-center justify-center">
             <MdBusinessCenter />
           </div>
-          <span className="text-white text-xl font-bold">SaaS</span>
+          <span className="text-white text-xl font-bold">Worklio</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -357,7 +357,7 @@ export default function AuthPage() {
 
       {/* Footer */}
       <footer className="py-6 text-center text-zinc-500 text-sm">
-        <p>© {new Date().getFullYear()} SaaS. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Worklio. All rights reserved.</p>
       </footer>
     </div>
   );
