@@ -9,7 +9,9 @@ import {
   PointerSensor, 
   useSensor, 
   useSensors,
-  closestCorners
+  closestCorners,
+  useDraggable,
+  useDroppable
 } from '@dnd-kit/core';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from 'next-themes';
@@ -161,6 +163,47 @@ const useMediaQueries = () => {
   };
 };
 
+// Draggable Task Component
+function DraggableTask({ task, renderTask }: { task: Task; renderTask: (task: Task) => React.ReactNode }) {
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
+    id: task.id,
+    data: { type: 'task', task }
+  });
+  
+  return (
+    <div 
+      ref={setNodeRef}
+      {...attributes}
+      {...listeners}
+      style={{ touchAction: 'none' }}
+      className={`${isDragging ? 'opacity-50' : ''}`}
+    >
+      {renderTask(task)}
+    </div>
+  );
+}
+
+// Droppable Column Component
+function DroppableColumn({ column, children, columnWidth }: { column: Column; children: React.ReactNode; columnWidth: string }) {
+  const { setNodeRef, isOver } = useDroppable({
+    id: column.id,
+    data: { type: 'column', column }
+  });
+  
+  return (
+    <motion.div
+      ref={setNodeRef}
+      key={column.id}
+      className={`${columnWidth} flex flex-col rounded-lg ${column.color} ${isOver ? 'ring-2 ring-pink-500 ring-inset' : ''} backdrop-blur-sm`}
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 const KanbanBoard = () => {
   const [columns, setColumns] = useState<Column[]>(initialColumns);
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -214,8 +257,7 @@ const KanbanBoard = () => {
     // Find source column
     const sourceColumn = columns.find(col => col.tasks.some(task => task.id === taskId));
     
- 
-    if (sourceColumn?.id === destinationColumnId) {
+    if (!sourceColumn || sourceColumn.id === destinationColumnId) {
       setActiveId(null);
       setActiveTask(null);
       return;
@@ -328,7 +370,7 @@ const KanbanBoard = () => {
     >
       <Card
         className={`border border-slate-200 dark:border-slate-800 shadow-sm ${
-          isDragging ? 'opacity-75' : 'cursor-move hover:shadow-md'
+          isDragging ? 'opacity-75' : 'hover:shadow-md'
         } transition-all bg-white dark:bg-slate-950`}
       >
         <CardHeader className="p-3 pb-0">
@@ -440,9 +482,9 @@ const KanbanBoard = () => {
                     <Textarea id="description" name="description" placeholder="Enter task description" />
                   </div>
                   
-                  {/* <div className="grid gap-2">
+                  <div className="grid gap-2">
                     <Label htmlFor="column">Column</Label>
-                    <Select onValueChange={setNewTaskColumn} required>
+                    <Select onValueChange={setNewTaskColumn} required defaultValue="">
                       <SelectTrigger>
                         <SelectValue placeholder="Select column" />
                       </SelectTrigger>
@@ -452,7 +494,7 @@ const KanbanBoard = () => {
                         ))}
                       </SelectContent>
                     </Select>
-                  </div> */}
+                  </div>
                   
                   <div className="grid gap-2">
                     <Label htmlFor="priority">Priority</Label>
@@ -507,16 +549,13 @@ const KanbanBoard = () => {
         onDragEnd={handleDragEnd}
         collisionDetection={closestCorners}
       >
-        <div className={`flex flex-col md:flex-row gap-4 p-4 overflow-auto h-[calc(100vh-73px)]`}>
+        <div className={`flex flex-col md:flex-row gap-12 p-8 overflow-auto h-[calc(100vh-73px)]`}>
           <AnimatePresence>
-            {columns.map((column, index) => (
-              <motion.div
-                key={column.id}
-                id={column.id}
-                className={`${columnWidth} flex flex-col rounded-lg ${column.color} ${isMobile ? 'mb-4' : 'flex-shrink-0'} backdrop-blur-sm`}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+            {columns.map((column) => (
+              <DroppableColumn 
+                key={column.id} 
+                column={column} 
+                columnWidth={columnWidth}
               >
                 <div className="p-3 font-medium flex justify-between items-center border-b border-slate-200/20 dark:border-slate-800/20">
                   <div className="flex items-center gap-2">
@@ -537,9 +576,11 @@ const KanbanBoard = () => {
                 <div className="flex-1 p-3 space-y-3 overflow-y-auto">
                   <AnimatePresence>
                     {column.tasks.map(task => (
-                      <div key={task.id} id={task.id}>
-                        {activeId === task.id ? null : renderTask(task)}
-                      </div>
+                      <DraggableTask 
+                        key={task.id} 
+                        task={task} 
+                        renderTask={renderTask}
+                      />
                     ))}
                   </AnimatePresence>
                 </div>
@@ -557,7 +598,7 @@ const KanbanBoard = () => {
                     Add task
                   </Button>
                 </div>
-              </motion.div>
+              </DroppableColumn>
             ))}
           </AnimatePresence>
         </div>
