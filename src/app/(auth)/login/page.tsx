@@ -21,17 +21,17 @@ import { Eye, EyeOff } from "lucide-react";
 export default function AuthPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [activeTab, setActiveTab] = useState("login");
-  const router = useRouter(); // Initialize router
+  const router = useRouter();
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push("/businessDash"); // Redirect after login
+    router.push("/businessDash");
   };
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push("/businessDash"); // Redirect after registration
+    router.push("/businessDash");
   };
 
   return (
