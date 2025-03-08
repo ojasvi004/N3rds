@@ -50,7 +50,7 @@ export default function Home() {
           <div className="w-10 h-10 rounded-full text-pink-900 text-5xl flex items-center justify-center">
             <MdBusinessCenter />
           </div>
-          <span className="text-white text-xl font-bold">SaaS</span>
+          <span className="text-white text-xl font-bold">Worklio</span>
         </div>
         <nav className="hidden md:flex items-center gap-8">
           <Link
@@ -158,16 +158,16 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white">
-              About SaaS
+              About Worklio
             </h2>
             <p className="text-lg text-zinc-400">
-              Founded in 2023, SaaS has revolutionized how businesses approach
+              Founded in 2023, Worklio has revolutionized how businesses approach
               regional pricing strategies. Our platform uses advanced AI
               algorithms to analyze market conditions and consumer behavior
               across different regions.
             </p>
             <p className="text-lg text-zinc-400">
-              With SaaS, businesses have seen an average increase of 32% in
+              With Worklio, businesses have seen an average increase of 32% in
               conversion rates and 28% in revenue within the first three months.
             </p>
             <div className="pt-4">
@@ -192,7 +192,7 @@ export default function Home() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   src="/static/image.png"
-                  alt="SaaS Dashboard"
+                  alt="Worklio Dashboard"
                   width={800}
                   height={700}
                   className="rounded-lg shadow-2xl"
@@ -278,7 +278,7 @@ export default function Home() {
             title="Free"
             price="₹0"
             visits="5K pricing page visits/mo"
-            features={["1 product", "SaaS discounts", "Advanced analytics"]}
+            features={["1 product", "Worklio discounts", "Advanced analytics"]}
             color="text-pink-500"
           />
 
@@ -289,9 +289,9 @@ export default function Home() {
             visits="10K pricing page visits/mo"
             features={[
               "5 products",
-              "SaaS discounts",
+              "Worklio discounts",
               "Advanced analytics",
-              "Remove Easy SaaS branding",
+              "Remove Easy Worklio branding",
             ]}
             color="text-pink-500"
             gradient="bg-gradient-to-br from-white/5 to-pink-500/10"
@@ -304,9 +304,9 @@ export default function Home() {
             visits="100K pricing page visits/mo"
             features={[
               "30 products",
-              "SaaS discounts",
+              "Worklio discounts",
               "Advanced analytics",
-              "Remove Easy SaaS branding",
+              "Remove Easy Worklio branding",
               "Banner customization",
             ]}
             color="text-pink-500"
@@ -321,9 +321,9 @@ export default function Home() {
             visits="1M pricing page visits/mo"
             features={[
               "50 products",
-              "SaaS discounts",
+              "Worklio discounts",
               "Advanced analytics",
-              "Remove Easy SaaS branding",
+              "Remove Easy Worklio branding",
               "Banner customization",
             ]}
             color="text-pink-500"
@@ -339,7 +339,7 @@ export default function Home() {
               <div className="w-10 h-10 rounded-full text-pink-900 text-5xl flex items-center justify-center">
                 <MdBusinessCenter />
               </div>
-              <span className="text-white text-lg font-bold">SaaS</span>
+              <span className="text-white text-lg font-bold">Worklio</span>
             </div>
             <p className="text-zinc-400 max-w-md">
               Optimize your pricing strategy across different regions and
@@ -399,7 +399,7 @@ export default function Home() {
 
         <div className="container mx-auto mt-12 pt-6 border-t border-zinc-800">
           <p className="text-zinc-500 text-sm text-center">
-            © {new Date().getFullYear()} SaaS. All rights reserved.
+            © {new Date().getFullYear()} Worklio. All rights reserved.
           </p>
         </div>
       </footer>
