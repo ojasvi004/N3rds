@@ -55,11 +55,12 @@ export default function Dashboard() {
 
   useEffect(() => {
     // Load data from JSON file
-    import("../data/business.json")
-      .then((module) => {
-        setData(module.default as DataType);
-        setLoading(false);
-      })
+  
+
+    import("../../data/business.json").then((module: { default: DataType }) => {
+      setData(module.default as DataType);
+      setLoading(false);
+    })
       .catch((error) => {
         console.error("Error loading data:", error);
         setLoading(false);
