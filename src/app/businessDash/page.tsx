@@ -140,10 +140,10 @@ export default function Dashboard() {
             <h3 className="text-lg font-medium text-gray-700">MRR Growth</h3>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={transformMonthlyData(data.mrrGrowth?.monthlyData)}>
+                <LineChart data={transformMonthlyData(data.mrrGrowth?.monthlyData as MonthlyData[])}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" />
-                  <YAxis tickFormatter={(value) => `${value / 1000}k`} />
+                  <YAxis tickFormatter={(value: number) => `${value / 1000}k`} />
                   <Tooltip formatter={(value: number) => [`$${value.toLocaleString()}`, "MRR"]} />
                   <Line type="monotone" dataKey="value" stroke="#8884d8" strokeWidth={3} />
                 </LineChart>
