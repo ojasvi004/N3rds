@@ -1,141 +1,141 @@
 {
-    "currentDate": "Mar 8, 2025",
-    "dateRange": {
+  "currentDate": "Mar 8, 2025",
+  "dateRange": {
       "monthToDate": "Mar 1 - 8",
       "last12Months": "2024 Mar - 2025 Feb"
-    },
-    "overview": {
+  },
+  "overview": {
       "arr": {
-        "value": 203.00,
-        "previousValue": 417.00,
-        "percentChange": -51,
-        "trend": "down"
+          "value": 16800.00,
+          "previousValue": 34500.00,
+          "percentChange": -51,
+          "trend": "down"
       },
       "mrr": {
-        "value": 832.00,
-        "previousValue": 261.00,
-        "percentChange": 219,
-        "trend": "up"
+          "value": 68800.00,
+          "previousValue": 21500.00,
+          "percentChange": 220,
+          "trend": "up"
       },
       "customers": {
-        "value": 412,
-        "previousValue": 329,
-        "percentChange": 25,
-        "trend": "up"
+          "value": 9321,
+          "previousValue": 7580,
+          "percentChange": 23,
+          "trend": "up"
       }
-    },
-    "mrrGrowth": {
-      "currentValue": 214496,
-      "previousValue": 174600,
+  },
+  "mrrGrowth": {
+      "currentValue": 17840000,
+      "previousValue": 14520000,
       "percentChange": 23,
       "trend": "up",
       "monthlyData": [
-        { "month": "Mar", "year": 2024, "value": 170000 },
-        { "month": "Apr", "year": 2024, "value": 180000 },
-        { "month": "May", "year": 2024, "value": 190000 },
-        { "month": "Jun", "year": 2024, "value": 185000 },
-        { "month": "Jul", "year": 2024, "value": 195000 },
-        { "month": "Aug", "year": 2024, "value": 200000 },
-        { "month": "Sep", "year": 2024, "value": 190000 },
-        { "month": "Oct", "year": 2024, "value": 210000 },
-        { "month": "Nov", "year": 2024, "value": 205000 },
-        { "month": "Dec", "year": 2024, "value": 208000 },
-        { "month": "Jan", "year": 2025, "value": 212000 },
-        { "month": "Feb", "year": 2025, "value": 214496 }
+          { "month": "Mar", "year": 2024, "value": 14000000 },
+          { "month": "Apr", "year": 2024, "value": 14800000 },
+          { "month": "May", "year": 2024, "value": 15600000 },
+          { "month": "Jun", "year": 2024, "value": 15300000 },
+          { "month": "Jul", "year": 2024, "value": 16200000 },
+          { "month": "Aug", "year": 2024, "value": 16800000 },
+          { "month": "Sep", "year": 2024, "value": 16000000 },
+          { "month": "Oct", "year": 2024, "value": 17500000 },
+          { "month": "Nov", "year": 2024, "value": 17200000 },
+          { "month": "Dec", "year": 2024, "value": 17450000 },
+          { "month": "Jan", "year": 2025, "value": 17700000 },
+          { "month": "Feb", "year": 2025, "value": 17840000 }
       ]
-    },
-    "mrrChurnRate": {
-      "currentValue": 3.00,
-      "previousValue": 2.00,
-      "percentChange": 50,
+  },
+  "mrrChurnRate": {
+      "currentValue": 3.2,
+      "previousValue": 2.1,
+      "percentChange": 52,
       "trend": "up",
       "monthlyData": [
-        { "month": "Mar", "year": 2024, "value": 2.1 },
-        { "month": "Apr", "year": 2024, "value": 2.8 },
-        { "month": "May", "year": 2024, "value": 3.2 },
-        { "month": "Jun", "year": 2024, "value": 2.7 },
-        { "month": "Jul", "year": 2024, "value": 2.4 },
-        { "month": "Aug", "year": 2024, "value": 3.5 },
-        { "month": "Sep", "year": 2024, "value": 3.7 },
-        { "month": "Oct", "year": 2024, "value": 2.3 },
-        { "month": "Nov", "year": 2024, "value": 1.9 },
-        { "month": "Dec", "year": 2024, "value": 2.5 },
-        { "month": "Jan", "year": 2025, "value": 2.8 },
-        { "month": "Feb", "year": 2025, "value": 3.0 }
+          { "month": "Mar", "year": 2024, "value": 2.4 },
+          { "month": "Apr", "year": 2024, "value": 2.9 },
+          { "month": "May", "year": 2024, "value": 3.3 },
+          { "month": "Jun", "year": 2024, "value": 2.8 },
+          { "month": "Jul", "year": 2024, "value": 2.5 },
+          { "month": "Aug", "year": 2024, "value": 3.7 },
+          { "month": "Sep", "year": 2024, "value": 3.9 },
+          { "month": "Oct", "year": 2024, "value": 2.4 },
+          { "month": "Nov", "year": 2024, "value": 2.0 },
+          { "month": "Dec", "year": 2024, "value": 2.7 },
+          { "month": "Jan", "year": 2025, "value": 2.9 },
+          { "month": "Feb", "year": 2025, "value": 3.2 }
       ]
-    },
-    "churnMRR": {
-      "currentValue": 3871.00,
-      "previousValue": 4591.00,
+  },
+  "churnMRR": {
+      "currentValue": 318700.00,
+      "previousValue": 378900.00,
       "percentChange": -16,
       "trend": "down",
       "monthlyData": [
-        { "month": "Mar", "year": 2024, "value": 3500 },
-        { "month": "Apr", "year": 2024, "value": 3700 },
-        { "month": "May", "year": 2024, "value": 3900 },
-        { "month": "Jun", "year": 2024, "value": 4200 },
-        { "month": "Jul", "year": 2024, "value": 4100 },
-        { "month": "Aug", "year": 2024, "value": 3800 },
-        { "month": "Sep", "year": 2024, "value": 3600 },
-        { "month": "Oct", "year": 2024, "value": 3500 },
-        { "month": "Nov", "year": 2024, "value": 3900 },
-        { "month": "Dec", "year": 2024, "value": 4200 },
-        { "month": "Jan", "year": 2025, "value": 4000 },
-        { "month": "Feb", "year": 2025, "value": 3871 }
+          { "month": "Mar", "year": 2024, "value": 285000 },
+          { "month": "Apr", "year": 2024, "value": 302000 },
+          { "month": "May", "year": 2024, "value": 324000 },
+          { "month": "Jun", "year": 2024, "value": 348000 },
+          { "month": "Jul", "year": 2024, "value": 340000 },
+          { "month": "Aug", "year": 2024, "value": 315000 },
+          { "month": "Sep", "year": 2024, "value": 298000 },
+          { "month": "Oct", "year": 2024, "value": 285000 },
+          { "month": "Nov", "year": 2024, "value": 324000 },
+          { "month": "Dec", "year": 2024, "value": 348000 },
+          { "month": "Jan", "year": 2025, "value": 330000 },
+          { "month": "Feb", "year": 2025, "value": 318700 }
       ]
-    },
-    "mrrByPlan": {
-      "categories": ["Basic", "Starter", "Team", "Custom"],
-      "values": [42, 65, 78, 56],
-      "label": "Business"
-    },
-    "churnedMRRByPlan": {
-      "total": 2391.00,
+  },
+  "mrrByPlan": {
+      "categories": ["Basic", "Growth", "Premium", "Enterprise"],
+      "values": [4800, 7200, 9600, 6400],
+      "label": "Indian Business Plans"
+  },
+  "churnedMRRByPlan": {
+      "total": 197000.00,
       "plans": [
-        { "name": "Basic", "value": 520.25, "color": "#50C878", "percentage": 21.8 },
-        { "name": "Pro", "value": 738.75, "color": "#E3A15D", "percentage": 30.9 },
-        { "name": "Team", "value": 797.50, "color": "#5DA3E3", "percentage": 33.4 },
-        { "name": "Custom", "value": 335.50, "color": "#9C5DE3", "percentage": 14.0 }
+          { "name": "Basic", "value": 42000.00, "color": "#50C878", "percentage": 21.3 },
+          { "name": "Growth", "value": 62000.00, "color": "#E3A15D", "percentage": 31.5 },
+          { "name": "Premium", "value": 66000.00, "color": "#5DA3E3", "percentage": 33.5 },
+          { "name": "Enterprise", "value": 27000.00, "color": "#9C5DE3", "percentage": 13.7 }
       ]
-    },
-    "churnOverview": [
+  },
+  "churnOverview": [
       {
-        "metric": "Churned MRR",
-        "value": 3769.00,
-        "percentChange": 2,
-        "trend": "up"
+          "metric": "Churned MRR",
+          "value": 310000.00,
+          "percentChange": 2,
+          "trend": "up"
       },
       {
-        "metric": "Churned MRR (Delinquent)",
-        "value": 997.00,
-        "percentChange": 24,
-        "trend": "up"
+          "metric": "Churned MRR (Delinquent)",
+          "value": 82000.00,
+          "percentChange": 25,
+          "trend": "up"
       },
       {
-        "metric": "Churned MRR Rate",
-        "value": 8.00,
-        "isPercentage": true,
-        "percentChange": 167,
-        "trend": "up"
+          "metric": "Churned MRR Rate",
+          "value": 7.5,
+          "isPercentage": true,
+          "percentChange": 160,
+          "trend": "up"
       },
       {
-        "metric": "Churned Customers",
-        "value": 23,
-        "percentChange": 35,
-        "trend": "up"
+          "metric": "Churned Customers",
+          "value": 197,
+          "percentChange": 34,
+          "trend": "up"
       },
       {
-        "metric": "Churned Customers (Delinquent)",
-        "value": 233,
-        "percentChange": 21,
-        "trend": "up"
+          "metric": "Churned Customers (Delinquent)",
+          "value": 1840,
+          "percentChange": 19,
+          "trend": "up"
       },
       {
-        "metric": "Customer Churn Rate",
-        "value": 1.00,
-        "isPercentage": true,
-        "percentChange": -80,
-        "trend": "down"
+          "metric": "Customer Churn Rate",
+          "value": 1.1,
+          "isPercentage": true,
+          "percentChange": -75,
+          "trend": "down"
       }
-    ]
-  }
+  ]
+}
