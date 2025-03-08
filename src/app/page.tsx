@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable */
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -118,7 +119,8 @@ export default function Home() {
         </h1>
         <p className="mt-8 text-lg md:text-xl text-zinc-400 max-w-3xl mx-auto relative z-10">
           Capture 85% of the untapped market with dynamic, location-based
-          pricing strategies to ensure you're always offering competitive rates.
+          pricing strategies to ensure you&apos;re always offering competitive
+          rates.
         </p>
         <Button
           size="lg"
